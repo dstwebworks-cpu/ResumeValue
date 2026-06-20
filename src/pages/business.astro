@@ -10,10 +10,10 @@ const buyers = [
   'Government workforce programs',
 ];
 const steps = [
-  { n: '1', h: 'Upload a roster', p: 'A CSV of candidates or a batch of resume files — 10 or 10,000, same process. No per-seat setup fee.' },
-  { n: '2', h: 'We enrich each', p: 'Working backwards from experience, we surface the skills, standards, and credentials each role involves — consistent across occupations.' },
-  { n: '3', h: 'Your team reviews', p: 'Per-candidate results; low-confidence items flagged for your review, never auto-claimed. You sign off on what goes out under your name.' },
-  { n: '4', h: 'Export', p: 'ATS-clean resumes plus per-candidate and org-level reports — PDF, DOCX, or data.' },
+  { n: '1', h: 'Upload a roster', p: 'A CSV of candidates, or a batch of resume files — 10 or 10,000, the same pipeline. What comes back depends on what you send (see below). No per-seat setup fee.' },
+  { n: '2', h: 'We enrich each', p: 'Working backwards from experience, we surface the skills, standards, and training each role involves — across a wide range of occupations.' },
+  { n: '3', h: 'Your team reviews', p: 'Per-candidate results; low-confidence items and anything credential-like are flagged for your review, never auto-claimed. You sign off on what goes out under your name.' },
+  { n: '4', h: 'Export', p: 'Per-candidate and org-level reports, plus ATS-clean resumes where you supplied the file — export as PDF, DOCX, or CSV/JSON for your ATS.' },
 ];
 ---
 <Base
@@ -25,7 +25,7 @@ const steps = [
     <div class="container hero-grid">
       <div>
         <p class="eyebrow">For organizations</p>
-        <h1>Enrich every candidate's resume — at scale.</h1>
+        <h1>Enrich every candidate's qualifications — at scale.</h1>
         <p class="lede">Your people earned qualifications they never put on paper. Upload a roster; we surface the standards, certs, tools, and training each role involves — and ask before we claim, so nothing is fabricated. Per enriched candidate, in bulk.</p>
         <div class="cta-row">
           <a class="btn btn-primary btn-lg" href="#quote">Request a quote</a>
@@ -52,11 +52,17 @@ const steps = [
   <section class="section">
     <div class="container">
       <p class="eyebrow">How it works (bulk)</p>
-      <h2>From roster to enriched resumes in four steps.</h2>
+      <h2>From roster to enriched candidates in four steps.</h2>
       <div class="grid cols-2 steps">
         {steps.map((s) => (
           <div class="card"><span class="step-n">{s.n}</span><h3>{s.h}</h3><p>{s.p}</p></div>
         ))}
+      </div>
+
+      <p class="eyebrow" style="margin-top:36px">What you get depends on what you send</p>
+      <div class="grid cols-2">
+        <div class="card"><h3>Send a CSV</h3><p class="muted">Name, role, and employer per candidate. You get a per-candidate <b>qualification report</b> — the skills, standards, and training that role involves, in claimable language, plus a draft skills block. Not a finished resume: a CSV has no work history, dates, or accomplishments to build one from.</p></div>
+        <div class="card"><h3>Send resume files</h3><p class="muted">Each candidate's existing resume. We build a <b>full ATS-clean resume</b> from their real history, enriched with the qualifications they left off. Anything credential-like is flagged for confirmation — never invented.</p></div>
       </div>
     </div>
   </section>
@@ -69,7 +75,7 @@ const steps = [
       <div class="grid cols-3">
         <div class="card"><h3>Integrity at scale</h3><p>We never claim a credential. Anything that looks like a formal certification is routed to your reviewer's queue to confirm — never auto-claimed.</p></div>
         <div class="card"><h3>Surfaces the implied</h3><p>The standards and training a role involves (IATF, OSHA/LOTO, CLIA, NEC, MOS→civilian translation) that generic resume tools never name.</p></div>
-        <div class="card"><h3>Bulk or API</h3><p>Hand-upload a roster, or POST a batch to our API and get enriched, integrity-checked results back by webhook — straight into your own ATS.</p></div>
+        <div class="card"><h3>Bulk now, API planned</h3><p>Hand-upload a roster today. An API to POST a batch and get enriched, integrity-checked results back by webhook — straight into your own ATS — is on the roadmap.</p></div>
       </div>
     </div>
   </section>
@@ -97,7 +103,7 @@ const steps = [
             <tr><th>Won't fabricate credentials</th><td class="c">✓</td><td class="x">✗</td><td class="c">✓</td><td class="us c">✓</td></tr>
             <tr><th>Low-confidence flagged for YOUR reviewer</th><td class="p">~</td><td class="x">✗</td><td class="p">~</td><td class="us c">✓</td></tr>
             <tr><th>Surfaces skills candidates left off</th><td class="p">~</td><td class="x">✗</td><td class="c">✓</td><td class="us c">✓</td></tr>
-            <tr><th>Bulk upload + API into your ATS</th><td class="x">✗</td><td class="p">~</td><td class="x">✗</td><td class="us c">✓</td></tr>
+            <tr><th>Bulk processing + structured export</th><td class="x">✗</td><td class="p">~</td><td class="x">✗</td><td class="us c">✓</td></tr>
             <tr><th>Typical cost</th><td>staff hours<br /><span class="sub">doesn't scale</span></td><td>low / per seat<br /><span class="sub">accuracy risk</span></td><td>$275–$10k+<br /><span class="sub">per employee</span></td><td class="us">per enriched candidate<br /><span class="sub">volume tiers · by quote</span></td></tr>
           </tbody>
         </table>
