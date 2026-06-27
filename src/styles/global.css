@@ -80,6 +80,8 @@ p { margin: 0 0 1rem; }
 .btn-premium:hover { background: #5a2eb5; color: #fff; }
 .btn-ghost { background: #fff; color: var(--ink); border-color: var(--line); }
 .btn-ghost:hover { border-color: var(--ink); color: var(--ink); }
+.btn-amber { background: var(--accent-strong); color: #16202b; }
+.btn-amber:hover { background: #e08c00; color: #16202b; transform: translateY(-1px); }
 .btn-lg { padding: 16px 28px; font-size: 1.06rem; }
 .btn:focus-visible, a:focus-visible, button:focus-visible { outline: 3px solid #9db4d6; outline-offset: 2px; }
 
