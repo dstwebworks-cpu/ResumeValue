@@ -1,0 +1,114 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base
+  title="ResumeValue — let's fix what the last service wouldn't"
+  description="Paid a resume writer and still stuck? Upload the draft you paid for. We'll find what it left out, you confirm every line, and any line you don't like gets redone from your note. Nothing made up. $49 base · $149 targeted, one-time."
+>
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow">For anyone burned by a paid rewrite</p>
+        <h1>Let's fix what the last service <span class="hl">wouldn't</span>.</h1>
+        <p class="tagline">You paid hundreds. You asked for changes. You got a shrug — or silence.</p>
+        <p class="lede">
+          Bring us the draft you paid for. It's a starting point, not a loss — we'll dig back into your
+          real experience, find what the rewrite left out, and you approve every line before it lands
+          on the page. And we won't ask who the last service was. It doesn't matter.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-amber btn-lg" href="/#get-started">Upload the resume you paid for</a>
+          <a class="btn btn-ghost btn-lg" href="/guides/resume-writer-wont-revise">Not sure yet? Read the rescue guide</a>
+        </div>
+        <ul class="pills">
+          <li class="pill">Nothing made up</li>
+          <li class="pill">You approve every line</li>
+          <li class="pill">One payment — no revision haggling</li>
+        </ul>
+      </div>
+
+      <div class="familiar" aria-label="Common experiences with paid resume services">
+        <div class="fcard">
+          <b>"It was my old resume in a new font."</b>
+          <p>You paid for a rewrite and got your own sentences rearranged — nothing new found, nothing added.</p>
+        </div>
+        <div class="fcard">
+          <b>"I sent notes. One came back half-done."</b>
+          <p>The revision sort of addressed your first note, skipped the second, and ignored the third.</p>
+        </div>
+        <div class="fcard">
+          <b>"Round two ended in silence."</b>
+          <p>Somewhere between 'final draft' and the unanswered email, the help you paid for stopped helping.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT GOES DIFFERENTLY ===== -->
+  <section class="section alt">
+    <div class="container">
+      <p class="eyebrow">How this goes differently here</p>
+      <h2>You never have to argue with us.</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>We find what the rewrite left out</h3>
+          <p>We work backwards from your real experience — the tools, standards, and training your work
+          involved that never made it onto the page. Each one is shown to you first: you confirm what's
+          really yours, in your words.</p>
+        </div>
+        <div class="card">
+          <h3>Every line answers to you</h3>
+          <p>Don't like a line? Edit it directly, or add a note — "I led this, I didn't assist" — and we
+          redo that line from your note, right then. No waiting on replies. No revision-round negotiations.</p>
+        </div>
+        <div class="card">
+          <h3>Nothing made up — ever</h3>
+          <p>We never put a credential, title, or number on your resume that you didn't confirm. If the
+          last draft had lines you never said, this is where they come out.</p>
+        </div>
+        <div class="card">
+          <h3>Proof it reads cleanly</h3>
+          <p>Before you're done, you see what hiring software actually extracts from your resume — so the
+          finished file isn't just better to your eye, it's readable to the systems that screen it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRICING ANCHOR ===== -->
+  <section class="section">
+    <div class="container priceband">
+      <p class="eyebrow">One payment. No subscription.</p>
+      <h2>Finish this for a fraction of what the last round cost.</h2>
+      <p class="lede">$49 for a complete, honest, machine-readable rebuild — or $149 to aim it at one
+      specific role, in that field's language. You stay the author the whole way.</p>
+      <div class="cta-row" style="justify-content:center">
+        <a class="btn btn-primary btn-lg" href="/#pricing">See pricing &amp; get started</a>
+      </div>
+      <p class="muted small">A resume completeness tool — not a job-placement service. We don't guarantee jobs, interviews, or salaries. We don't name or review specific companies; if a service treated you well, wonderful — this page is for when one didn't.</p>
+    </div>
+  </section>
+
+  <style>
+    .hero { padding: 58px 0 48px; background:
+      radial-gradient(1100px 460px at 72% -12%, #d8e5fa, transparent 70%),
+      radial-gradient(760px 380px at 4% 112%, #fdf0dc, transparent 62%),
+      var(--bg); }
+    .hero-grid { display: grid; gap: 36px; align-items: center; }
+    @media (min-width: 960px) { .hero-grid { grid-template-columns: 1.05fr 0.95fr; } }
+    .tagline { font-size: clamp(1.1rem, 2vw, 1.4rem); font-weight: 700; color: var(--ink); margin: 0 0 12px; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin: 22px 0 18px; }
+    .pills { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; margin: 0; }
+
+    .familiar { display: grid; gap: 14px; }
+    .fcard { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--accent-strong);
+      border-radius: var(--radius); padding: 16px 18px; box-shadow: var(--shadow); }
+    .fcard b { display: block; margin-bottom: 4px; }
+    .fcard p { margin: 0; color: var(--muted); font-size: .95rem; }
+
+    .priceband { text-align: center; max-width: 760px; }
+    .priceband .lede { margin-left: auto; margin-right: auto; max-width: 56ch; }
+    .small { font-size: .85rem; margin-top: 18px; }
+  </style>
+</Base>
